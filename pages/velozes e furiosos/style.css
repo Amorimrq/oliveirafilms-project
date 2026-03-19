@@ -1,0 +1,339 @@
+﻿*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+body{
+    
+    background-image: url(https://wallpapers.com/images/hd/2560-x-1440-movie-2560-x-1440-56mproziihvmfjsd.jpg);    
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    padding-top: 130px;
+    
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: black;
+  color: white;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 6px;
+}
+
+header{
+    font-family: 'Bebas Neue', sans-serif;
+    top:0;
+    left: 0;
+    min-height: 100px;
+    width: 100%;
+    color: white;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 10px 50px;
+    background-position: fixed;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    border-bottom: 3px solid gray;
+    box-shadow: 0 8px 10px -6px gray;
+    z-index: 1000;
+    
+}
+
+header nav{
+  width: 100%;
+}
+
+header ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.texto {
+  font-size: 70px;
+  text-decoration: none;
+  color: white;
+  flex-shrink: 0;
+}
+
+.inicio , .categoria, .inicio:hover, .categoria:hover  {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 35px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.inicio{margin-left: auto;}
+
+.categoria{margin-left: 20px ;}
+
+
+
+
+.caixa{
+  border-radius: 30px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: min(1200px, calc(100% - 48px));
+  background-color: rgba(0, 0, 0, 0.34);
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px;
+}
+
+.posterfilme img{
+  border-radius: 16px;
+  width: min(100%, 280px);
+  height: auto;
+  aspect-ratio: 7 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+
+.titulo{
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.titulo h1{
+  line-height: 1;
+}
+
+.caixadescricao{
+  background-color: rgba(0, 0, 0, 0.558);
+  border-radius: 16px;
+  width: 100%;
+  
+}
+
+.caixano{
+  background-color: rgba(0, 0, 0, 0.558);
+  border-radius: 16px;
+  text-align: bottom;
+  display: block;
+  width: fit-content;
+    
+}
+
+.caixadirecao, .caixagenero {
+  background-color: rgba(0, 0, 0, 0.558);
+  border-radius: 16px;
+  width: 100%;
+  display:block;
+  
+}
+
+.caixagenero{
+  background-color: rgba(0, 0, 0, 0.558);
+}
+
+.info-linha{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.caixadirecao{
+  margin-top: 12px;
+}
+
+.caixatrailer{
+  background-color: rgba(0, 0, 0, 0.558);
+  border-radius: 16px;
+  padding: 0 20px 24px;
+  flex: 0 1 420px;
+  width: min(100%, 420px);
+  max-width: 420px;
+}
+
+.caixatrailer iframe{
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 220px;
+  height: auto;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.info-trailer{
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.info-col{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-width: 260px;
+}
+
+.enredo, .paragrafo, .ano{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(18px, 2vw, 25px);
+  margin: 10px;
+  
+
+}
+
+footer{
+  margin-top: 50px;
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  padding: 48px 24px;
+  background-color: rgb(0, 0, 0);
+  border-top: 2px solid gray;
+}
+
+footer p{
+  font-size: clamp(20px, 3vw, 28px);
+  margin: 6px 0;
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding-top: 150px;
+  }
+
+  header {
+    padding: 12px 24px;
+  }
+
+  .texto {
+    font-size: 54px;
+  }
+
+  .inicio,
+  .categoria {
+    font-size: 30px;
+  }
+
+  .caixa {
+    width: min(900px, calc(100% - 32px));
+    padding: 20px;
+  }
+
+  .posterfilme img {
+    width: min(260px, 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 170px;
+    background-attachment: scroll;
+  }
+
+  header {
+    min-height: auto;
+    padding: 14px 18px;
+  }
+
+  header ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 18px;
+  }
+
+  .texto {
+    width: 100%;
+    text-align: center;
+    font-size: 46px;
+  }
+
+  .inicio,
+  .categoria {
+    margin-left: 0;
+    font-size: 28px;
+  }
+
+  .caixa {
+    width: calc(100% - 24px);
+    margin-top: 24px;
+    padding: 16px;
+    gap: 18px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .posterfilme,
+  .titulo,
+  .info-col,
+  .caixatrailer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .posterfilme img {
+    width: min(320px, 100%);
+    margin: 0 auto;
+  }
+
+  .titulo {
+    align-items: stretch;
+  }
+
+  .titulo h1 {
+    text-align: center;
+  }
+
+  .caixatrailer {
+    padding: 0 14px 18px;
+  }
+
+  .caixatrailer iframe {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 160px;
+  }
+
+  .texto {
+    font-size: 38px;
+  }
+
+  .inicio,
+  .categoria {
+    font-size: 24px;
+  }
+
+  .caixa {
+    width: calc(100% - 16px);
+    border-radius: 20px;
+    padding: 12px;
+  }
+
+  .enredo,
+  .paragrafo,
+  .ano {
+    margin: 8px;
+  }
+
+  footer {
+    padding: 36px 16px;
+  }
+}
